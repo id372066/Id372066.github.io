@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Address Copier</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            background-color: green;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cryptocurrency Addresses</h1>
+    <div id="buttons-container">
+        <button onclick="copyToClipboard('bc1qxgvee7a7fvhn38ccu7wqdgws58xqcp2p3499pz')">Bitcoin</button>
+        <button onclick="copyToClipboard('0xa01f46a8d3dab2079fc31b6d3edab4d73996102de87300dc9c657e5812ae36dd')">Aion</button>
+        <button onclick="copyToClipboard('qra9432px6y0wpu8vay9za7u6l8hqgxplsak8j4ghz')">Bitcoin Cash</button>
+        <button onclick="copyToClipboard('Xe6TmaPb9pYEt5BgYM3Uc9L1Dh3ZMKxmvJ')">Dash</button>
+        <button onclick="copyToClipboard('DseFij4UTf614R9hujXAEFyXaPxXvGSaiVh')">Decred</button>
+        <button onclick="copyToClipboard('dgb1qh6actql47ndavvl8h0tu5qcftcrcmwt6ahn93z')">Digibyte</button>
+        <button onclick="copyToClipboard('DUMkMqA6ycgp4HReKuBFNnJ4Ggcw3HhE1g')">Dogecoin</button>
+        <button onclick="copyToClipboard('0x5a614fFF8912475395F89f62194d16724ffbE01b')">Ethereum</button>
+        <button onclick="copyToClipboard('0x15579bB99a1563466bAA173713cC1E2544422467')">Ethereum Classic</button>
+        <button onclick="copyToClipboard('ltc1qhq24ml45c7k696czkfc3t6vj7ruh60jnq2mg7w')">Litecoin</button>
+        <button onclick="copyToClipboard('49ikxmsUc6SAzNsneFewPKfvgLCfQGcNh2UGLVHX78bKNzB9TvPhe4V2psRrYSWZbt6fEZ5h5De9uW5PEyPbRvk78kyEiRb')">Monero</button>
+        <button onclick="copyToClipboard('AznYpfL5wuCynph35HAvfEC66ZDuTBnommkNXwYs4tNw')">Solana</button>
+        <button onclick="copyToClipboard('TQQAhAEwrP9o5YC6qwhtp78CLgSrCXiJ5V')">Tron</button>
+        <button onclick="copyToClipboard('r3HXBXc1NM5x3umc333qiygVqJshNjy8PY')">XRP</button>
+        <button onclick="copyToClipboard('t1WgBvq6PFhavosvNGG2JiijQBBknFD5sxk')">Zcash</button>
+    </div>
+
+    <script>
+        function copyToClipboard(address) {
+            try {
+                navigator.clipboard.writeText(address).then(() => {
+                    alert('Address copied: ' + address);
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                    alert('Failed to copy address. Please try again.');
+                });
+            } catch (error) {
+                console.error('Error accessing clipboard: ', error);
+                alert('An error occurred while trying to access the clipboard.');
+            }
+        }
+    </script>
+</body>
+</html>
